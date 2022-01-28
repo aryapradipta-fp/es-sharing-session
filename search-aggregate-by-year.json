@@ -1,0 +1,26 @@
+{
+    "query": {
+        "bool": {
+            "must": {
+                "match": {
+                    "genres": "Animated"
+                }
+            },
+            "filter": {
+                "range": {
+                    "year": {
+                        "gte": 2010
+                    }
+                }
+            },
+            "boost": 1.0
+        }
+    },
+    "aggs": {
+        "movies": {
+            "terms": {
+                "field": "year"
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "query": {
+        "bool": {
+            "must": {
+                "match": {
+                    "genres": "Animated"
+                }
+            },
+            "filter": {
+                "range": {
+                    "year": {
+                        "gte": 2010
+                    }
+                }
+            },
+            "boost": 1.0
+        }
+    },
+    "from": 5,
+    "size": 20
+}

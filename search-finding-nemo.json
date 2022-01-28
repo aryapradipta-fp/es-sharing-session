@@ -1,0 +1,12 @@
+{
+    "query": {
+        "bool": {
+            "must": {
+                "match": {
+                    "title": "Finding Nemo"
+                }
+            },
+            "boost": 1.0
+        }
+    }
+}
